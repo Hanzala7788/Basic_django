@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Hello World!</h1>
+{% for article in obj_queryset %}
+<ul>
+    <li><a href="/articles/{{ article.id }}/">{{ article.title }} - {{ article.content }}</a></li>
+</ul>
+{% endfor %}
+{% endblock %}
